@@ -8,3 +8,5 @@ struct Baggage {
 };
 
 #endif
+
+void log(Baggage b);
