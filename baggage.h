@@ -7,10 +7,10 @@ struct Baggage {
 	double weight;
 };
 
-#endif
-
 void log(Baggage b);
 bool allowOnBoard(Baggage baggage);
 bool isValid(Baggage baggage);
 Baggage getHeaviestBaggage(Baggage baggages[], int count);
 void redirect(Baggage* baggage, int toFlightNumber);
+
+#endif
