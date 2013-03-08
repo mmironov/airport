@@ -8,3 +8,8 @@ void log(Baggage b)
     cout << "Flight number: " << b.flightNumber << endl;
     cout << "Weight: " << b.weight << endl;
 }
+
+bool allowOnBoard(Baggage baggage)
+{
+	return baggage.weight <= 30;
+}
