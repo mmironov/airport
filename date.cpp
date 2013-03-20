@@ -83,7 +83,12 @@ void Date::setDate(unsigned short d, unsigned short m, int y)
 
 bool isDateValid(unsigned short day, unsigned short month, int year)
 {
-	return day > 0 && day <= numberOfDays(month, year);
+	bool valid = month >= 1 &&
+				 month <= 12 &&
+				 day >= 1 &&
+				 day <= numberOfDays(month, year);
+
+	return valid;
 }
 
 bool isYearLeap(int year)
