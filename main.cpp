@@ -1,5 +1,7 @@
 #include "baggage.h"
-#include "Date.h"
+#include "date.h"
+#include "flight.h"
+#include "time.h"
 #include <cstring>
 #include <iostream>
 using namespace std;
