@@ -2,11 +2,22 @@
 #include "date.h"
 #include "flight.h"
 #include "time.h"
+#include "flight.h"
 #include <cstring>
 #include <iostream>
 using namespace std;
 
+void demoBaggage();
+void demoFlights();
+
 int main()
+{
+	demoFlights();
+
+    return 0;
+}
+
+void demoBaggage()
 {
 	Baggage b;
 	b.flightNumber = 1004;
@@ -42,6 +53,12 @@ int main()
 
 	redirect(&anotherBaggage, 4444);
 	log(anotherBaggage);
+}
 
-    return 0;
+void demoFlights()
+{
+	Flight f("815", "N1", "D31", DEPARTURE, "SYD", "LAX");
+
+	const char* to = f.getToAirportCode();
+	cout << to << endl;
 }

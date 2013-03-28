@@ -19,6 +19,8 @@ public:
     unsigned short getHours() const;
     void setHours(unsigned short h);
 
+	int compare(const Time& time);
+
 	//0. Write definitions for the constructors and the methods of the class.
 };
 

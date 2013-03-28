@@ -2,10 +2,15 @@
 #define FLIGHT_H
 
 #include "time.h"
+#include "date.h"
 
 enum Status {
-	//1. Define suitable status states for a flight.
-	//For example: Check-In open; Delayed, etc.
+	NEW,
+	CHECK_IN,
+	BOARDING,
+	CLOSED,
+	DELAYED,
+	CANCELED
 };
 
 enum Direction {
@@ -15,6 +20,9 @@ enum Direction {
 class Flight {
 	char flightNumber[10];
 	
+	char terminal[10];
+	char gate[10];
+
 	Status status;
 	
 	Direction direction;
@@ -25,12 +33,19 @@ class Flight {
 	Date date;
 	Time time;
 public:
-	//2. Define suitable constructors for the class
-	//3. Define suitable set and get methods for the member variables
-	//4. Define a method that displays flight information for the passangers on the airport display
+	Flight(char flightNumber[], char terminal[], char gate[], Direction direction, char fromAirportCode[], char toAirportCode[]);
+
+	const char* getFlightNumber() const;
+	const char* getTerminal() const;
+	const char* getGate() const;
+	Status getStatus() const;
+	Direction getDirection() const;
+	const char* getFromAirportCode() const;
+	const char* getToAirportCode() const;
+
+	int compare(const Flight& flight);
 };
 
-//5. Define the method to dispaly the flights information as a table.
 void displayFlights(Flight flights[], int from, int to);
 
 #endif

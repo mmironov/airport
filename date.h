@@ -20,6 +20,12 @@ public:
 	void setYear(int y);
 
 	void setDate(unsigned short d, unsigned short m, int y);
+
+	//returns
+	//-1 if this is before date
+	//0	 if this is the same date as date
+	//1  if this is after date
+	int compare(const Date& date);
 };
 
 bool isDateValid(unsigned short day, unsigned short month, int year);
