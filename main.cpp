@@ -26,7 +26,7 @@ void demoBaggage()
 
 	log(b);
 
-	char* valid = isValid(b) ? "valid" : "not valid";
+	const char* valid = isValid(b) ? "valid" : "not valid";
 
 	cout << "This baggage is " << valid << ".\n";
 
