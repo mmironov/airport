@@ -6,3 +6,5 @@ class BoardingPass {
     Flight flight;
     int seat
 };
+
+#endif
